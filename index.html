@@ -5,71 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pancasila | Sila 3 Persatuan Indonesia</title>
     <link rel="icon" type="image/png" href="Garuda_Pancasila.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="tail-container bg-gray-50 text-gray-800">
 
-<nav class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <img src="Garuda_Pancasila.png" alt="Logo" class="w-12 h-12 object-contain">
-            <span class="text-3xl font-bold text-[#c8102e]">Pancasila</span>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-3">
+                <img src="Garuda_Pancasila.png" alt="Logo" class="w-12 h-12 object-contain">
+                <span class="text-3xl font-bold text-[#c8102e]">Pancasila</span>
+            </div>
+            
+            <div class="hidden md:flex gap-8 text-lg font-medium items-center">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="fenomena.html" class="nav-link">Fenomena Sosial</a>
+                <a href="nilai.html" class="nav-link">Nilai Moral</a>
+                <a href="interaktif.html" class="nav-link">Interaktif</a>
+                
+                <button onclick="showLoginModal()" id="login-btn" 
+                        class="flex items-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium hover:bg-[#9c0c24] transition-colors">
+                    <i class="fas fa-user"></i> Login
+                </button>
+            </div>
+            
+            <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700 focus:outline-none">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </button>
         </div>
-        
-        <div class="hidden md:flex gap-8 text-lg font-medium items-center">
-            <a href="index.html" class="hover:text-[#c8102e]">Home</a>
-            <a href="fenomena.html" class="hover:text-[#c8102e]">Fenomena Sosial</a>
-            <a href="nilai.html" class="hover:text-[#c8102e]">Nilai Moral</a>
-            <a href="interaktif.html" class="hover:text-[#c8102e]">Interaktif</a>
-            <button onclick="showLoginModal()" id="login-btn" 
-                    class="flex items-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium hover:bg-[#9c0c24]">
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-inner">
+            <a href="index.html" class="block py-2 text-lg font-medium text-[#c8102e] border-l-4 border-[#c8102e] pl-3">Home</a>
+            <a href="fenomena.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Fenomena Sosial</a>
+            <a href="nilai.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Nilai Moral</a>
+            <a href="interaktif.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Interaktif</a>
+            
+            <button onclick="showLoginModal()" class="w-full flex items-center justify-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium mt-2">
                 <i class="fas fa-user"></i> Login
             </button>
         </div>
+    </nav>
+
+    <header class="hero-bg text-white py-20 md:py-28">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Pancasila sebagai Nilai Moral dan Etika di Era Modern</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">Fokus Sila ke-3: Persatuan Indonesia — Melawan Perpecahan Akibat Hoaks dan Fanatisme</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-16">
         
-        <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700">
-            <i id="menu-icon" class="fas fa-bars"></i>
-        </button>
-    </div>
-</nav>
+        <section class="prose max-w-none text-lg leading-relaxed text-gray-700">
+            <h2 class="text-3xl font-bold text-[#c8102e] mb-8 text-center">Tentang Website Ini</h2>
+            <p class="mb-6">
+                Website ini dirancang sebagai media edukasi untuk memperkuat pemahaman masyarakat mengenai <strong>nilai-nilai Pancasila</strong>, khususnya <strong>Sila ke-3: Persatuan Indonesia</strong>. 
+                Di era digital saat ini, hoaks dan fanatisme sering menjadi ancaman serius yang dapat memecah belah persatuan bangsa.
+            </p>
+            <p class="mb-10">
+                Melalui website ini, Anda dapat mempelajari fenomena sosial yang terjadi, memahami nilai moral Pancasila, serta berlatih melalui konten interaktif untuk meningkatkan kesadaran dan sikap bijak dalam bermedia sosial.
+            </p>
+        </section>
 
-<header class="hero-bg text-white py-20 md:py-28">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6">Pancasila sebagai Nilai Moral dan Etika di Era Modern</h1>
-        <p class="text-xl md:text-2xl max-w-3xl mx-auto">Fokus Sila ke-3: Persatuan Indonesia — Melawan Perpecahan Akibat Hoaks dan Fanatisme</p>
-    </div>
-</header>
+        <section class="grid md:grid-cols-3 gap-8 mt-12">
+            <div class="bg-white p-8 rounded-3xl shadow-sm card-hover border border-gray-100">
+                <h3 class="text-2xl font-bold mb-3 text-[#c8102e]">Sila 3</h3>
+                <p class="text-gray-600">Persatuan Indonesia — Bersatu kita teguh, bercerai kita runtuh. Sila ini menjadi pondasi utama keutuhan NKRI.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm card-hover border border-gray-100">
+                <h3 class="text-2xl font-bold mb-3 text-[#c8102e]">Anti Hoaks</h3>
+                <p class="text-gray-600">Belajar mendeteksi dan melawan berita palsu yang memecah belah bangsa serta merusak persatuan.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm card-hover border border-gray-100">
+                <h3 class="text-2xl font-bold mb-3 text-[#c8102e]">Edukasi Digital</h3>
+                <p class="text-gray-600">Membangun sikap moral, etika, dan tanggung jawab sebagai warga negara di ruang digital.</p>
+            </div>
+        </section>
+        
+    </main>
 
-<div class="max-w-6xl mx-auto px-6 py-16">
-    <div class="prose max-w-none text-lg leading-relaxed text-gray-700">
-        <h2 class="text-3xl font-bold text-[#c8102e] mb-8 text-center">Tentang Website Ini</h2>
-        <p class="mb-6">
-            Website ini dirancang sebagai media edukasi untuk memperkuat pemahaman masyarakat mengenai <strong>nilai-nilai Pancasila</strong>, khususnya <strong>Sila ke-3: Persatuan Indonesia</strong>. 
-            Di era digital saat ini, hoaks dan fanatisme sering menjadi ancaman serius yang dapat memecah belah persatuan bangsa.
-        </p>
-        <p class="mb-10">
-            Melalui website ini, Anda dapat mempelajari fenomena sosial yang terjadi, memahami nilai moral Pancasila, serta berlatih melalui konten interaktif untuk meningkatkan kesadaran dan sikap bijak dalam bermedia sosial.
-        </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8 mt-12">
-        <div class="bg-white p-8 rounded-3xl shadow-sm card-hover">
-            <h3 class="text-2xl font-bold mb-3 text-[#c8102e]">Sila 3</h3>
-            <p class="text-gray-600">Persatuan Indonesia — Bersatu kita teguh, bercerai kita runtuh. Sila ini menjadi pondasi utama keutuhan NKRI.</p>
-        </div>
-        <div class="bg-white p-8 rounded-3xl shadow-sm card-hover">
-            <h3 class="text-2xl font-bold mb-3 text-[#c8102e]">Anti Hoaks</h3>
-            <p class="text-gray-600">Belajar mendeteksi dan melawan berita palsu yang memecah belah bangsa serta merusak persatuan.</p>
-        </div>
-        <div class="bg-white p-8 rounded-3xl shadow-sm card-hover">
-            <h3 class="text-2xl font-bold mb-3 text-[#c8102e]">Edukasi Digital</h3>
-            <p class="text-gray-600">Membangun sikap moral, etika, dan tanggung jawab sebagai warga negara di ruang digital.</p>
-        </div>
-    </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>>
+</html>
