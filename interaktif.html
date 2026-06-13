@@ -5,195 +5,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Interaktif - Pancasila</title>
     <link rel="icon" type="image/png" href="Garuda_Pancasila.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="tail-container bg-gray-50 text-gray-800">
 
-<nav class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <img src="Garuda_Pancasila.png" alt="Logo" class="w-12 h-12 object-contain">
-            <span class="text-3xl font-bold text-[#c8102e]">Pancasila</span>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-3">
+                <img src="Garuda_Pancasila.png" alt="Logo" class="w-12 h-12 object-contain">
+                <span class="text-3xl font-bold text-[#c8102e]">Pancasila</span>
+            </div>
+            
+            <div class="hidden md:flex gap-8 text-lg font-medium items-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="fenomena.html" class="nav-link">Fenomena Sosial</a>
+                <a href="nilai.html" class="nav-link">Nilai Moral</a>
+                <a href="interaktif.html" class="nav-link active">Interaktif</a>
+                
+                <button onclick="showLoginModal()" id="login-btn" 
+                        class="flex items-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium hover:bg-[#9c0c24] transition-colors">
+                    <i class="fas fa-user"></i> Login
+                </button>
+            </div>
+            
+            <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700 focus:outline-none">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </button>
         </div>
-        
-        <div class="hidden md:flex gap-8 text-lg font-medium items-center">
-            <a href="index.html" class="hover:text-[#c8102e]">Home</a>
-            <a href="fenomena.html" class="hover:text-[#c8102e]">Fenomena Sosial</a>
-            <a href="nilai.html" class="hover:text-[#c8102e]">Nilai Moral</a>
-            <a href="interaktif.html" class="hover:text-[#c8102e]">Interaktif</a>
-            <button onclick="showLoginModal()" id="login-btn" 
-                    class="flex items-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium hover:bg-[#9c0c24]">
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-inner">
+            <a href="index.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Home</a>
+            <a href="fenomena.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Fenomena Sosial</a>
+            <a href="nilai.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Nilai Moral</a>
+            <a href="interaktif.html" class="block py-2 text-lg font-medium text-[#c8102e] border-l-4 border-[#c8102e] pl-3">Interaktif</a>
+            
+            <button onclick="showLoginModal()" class="w-full flex items-center justify-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium mt-2">
                 <i class="fas fa-user"></i> Login
             </button>
         </div>
-        
-        <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700">
-            <i id="menu-icon" class="fas fa-bars"></i>
-        </button>
-    </div>
-</nav>
+    </nav>
 
-<header class="bg-[#c8102e] text-white py-16 md:py-20">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            Media Interaktif
-        </h1>
-        <p class="text-xl md:text-2xl text-white/90">
-            Uji Pemahamanmu tentang Pancasila dan Persatuan Indonesia
-        </p>
-    </div>
-</header>
-
-<div class="max-w-5xl mx-auto px-6 py-12">
-
-    <div class="bg-white rounded-3xl shadow-sm p-8 mb-12">
-        <h2 class="text-3xl font-bold mb-8 text-center text-[#c8102e]">
-            🧠 Quiz: Seberapa Siap Kamu Menjaga Persatuan?
-        </h2>
-        
-        <div id="quiz" class="space-y-8">
-            <div id="question" class="text-2xl font-medium text-center min-h-[120px]"></div>
-            <div id="options" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-            <button onclick="nextQuestion()" id="next-btn" 
-                    class="hidden w-full bg-[#c8102e] hover:bg-[#9c0c24] text-white py-4 rounded-2xl font-bold text-lg transition">
-                Pertanyaan Berikutnya →
-            </button>
+    <header class="hero-bg text-white py-16 md:py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Media Interaktif</h1>
+            <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">Uji Pemahamanmu tentang Pancasila dan Persatuan Indonesia</p>
         </div>
+    </header>
 
-        <div id="result" class="hidden text-center py-8">
-            <h3 class="text-4xl font-bold mb-4">Skor Anda: <span id="score" class="text-[#c8102e]"></span>/10</h3>
-            <p id="feedback" class="text-xl mb-8"></p>
-            <button onclick="restartQuiz()" 
-                    class="bg-gray-800 hover:bg-gray-900 text-white px-10 py-3 rounded-2xl font-bold transition">
-                Ulangi Quiz
-            </button>
-        </div>
-    </div>
+    <main class="max-w-5xl mx-auto px-6 py-12">
 
-    <div class="bg-white rounded-3xl shadow-sm p-8">
-        <h2 class="text-3xl font-bold mb-6 text-center text-[#c8102e]">Polling</h2>
-        <p class="text-center text-xl mb-8">Menurutmu, media sosial lebih banyak memberikan dampak apa terhadap persatuan Indonesia?</p>
-        
-        <div class="flex flex-col md:flex-row gap-4 justify-center">
-            <button onclick="vote(1)" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold transition">Positif</button>
-            <button onclick="vote(2)" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-4 rounded-2xl font-bold transition">Negatif</button>
-            <button onclick="vote(3)" class="flex-1 bg-gray-600 hover:bg-gray-700 text-white py-4 rounded-2xl font-bold transition">Netral</button>
-        </div>
-        
-        <div id="poll-result" class="mt-10 text-center"></div>
-    </div>
+        <section class="bg-white rounded-3xl shadow-sm p-8 mb-12 border border-gray-100">
+            <h2 class="text-3xl font-bold mb-8 text-center text-[#c8102e]">
+                🧠 Quiz: Seberapa Siap Kamu Menjaga Persatuan?
+            </h2>
+            
+            <div id="quiz" class="space-y-8">
+                <div id="question" class="text-2xl font-medium text-center min-h-[120px] flex items-center justify-center text-gray-700"></div>
+                <div id="options" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                <button onclick="nextQuestion()" id="next-btn" 
+                        class="hidden w-full bg-[#c8102e] hover:bg-[#9c0c24] text-white py-4 rounded-2xl font-bold text-lg transition shadow-sm">
+                    Pertanyaan Berikutnya →
+                </button>
+            </div>
 
-</div>
+            <div id="result" class="hidden text-center py-8">
+                <h3 class="text-4xl font-bold mb-4">Skor Anda: <span id="score" class="text-[#c8102e]"></span>/10</h3>
+                <p id="feedback" class="text-xl mb-8 text-gray-600"></p>
+                <button onclick="restartQuiz()" 
+                        class="bg-gray-800 hover:bg-gray-900 text-white px-10 py-3 rounded-2xl font-bold transition">
+                    Ulangi Quiz
+                </button>
+            </div>
+        </section>
 
-<script src="script.js"></script>
-<script>
+        <section class="bg-white rounded-3xl shadow-sm p-8 border border-gray-100">
+            <h2 class="text-3xl font-bold mb-6 text-center text-[#c8102e]">Polling</h2>
+            <p class="text-center text-xl mb-8 text-gray-600">Menurutmu, media sosial lebih banyak memberikan dampak apa terhadap persatuan Indonesia?</p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center max-w-3xl mx-auto">
+                <button onclick="vote(1)" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold transition shadow-sm">Positif</button>
+                <button onclick="vote(2)" class="flex-1 bg-red-600 hover:bg-red-700 text-white py-4 rounded-2xl font-bold transition shadow-sm">Negatif</button>
+                <button onclick="vote(3)" class="flex-1 bg-gray-600 hover:bg-gray-700 text-white py-4 rounded-2xl font-bold transition shadow-sm">Netral</button>
+            </div>
+            
+            <div id="poll-result" class="mt-10 text-center text-lg space-y-2 text-gray-700 font-medium"></div>
+        </section>
 
-const questions = [
-    { q: "Apa langkah pertama yang harus dilakukan saat melihat berita provokatif?", 
-      options: ["Langsung share ke grup", "Cek kebenarannya terlebih dahulu", "Marah-marah di kolom komentar", "Abaikan saja"], 
-      answer: 1 },
-    { q: "Sila ke-3 Pancasila berbunyi...", 
-      options: ["Ketuhanan Yang Maha Esa", "Persatuan Indonesia", "Keadilan Sosial bagi Seluruh Rakyat Indonesia", "Kemanusiaan yang Adil dan Beradab"], 
-      answer: 1 },
-    { q: "Salah satu ciri khas berita hoax adalah...", 
-      options: ["Sumber berita resmi", "Judul yang sangat sensasional", "Referensi jurnal ilmiah", "Foto dan video asli"], 
-      answer: 1 },
-    { q: "Sikap terbaik ketika melihat komentar kebencian di media sosial?", 
-      options: ["Balas dengan lebih kasar", "Report ke platform dan abaikan", "Like agar lebih viral", "Tag teman-teman untuk ikut"], 
-      answer: 1 },
-    { q: "Apa makna dari 'Bersatu kita teguh, bercerai kita runtuh'?", 
-      options: ["Persatuan sangat penting bagi bangsa", "Persaingan sehat itu baik", "Menang sendiri lebih utama", "Perbedaan harus dihilangkan"], 
-      answer: 0 },
-    { q: "Manakah yang termasuk dampak negatif hoaks terhadap persatuan?", 
-      options: ["Meningkatkan dialog antar kelompok", "Memicu polarisasi dan konflik sosial", "Memperkuat persatuan bangsa", "Menambah pengetahuan masyarakat"], 
-      answer: 1 },
-    { q: "Menurut nilai Pancasila, sikap yang paling dianjurkan di era digital adalah...", 
-      options: ["Bebas mengatakan apapun tanpa filter", "Menghargai perbedaan dan verifikasi fakta", "Selalu membela golongan sendiri", "Menyebarkan berita yang menguntungkan diri"], 
-      answer: 1 },
-    { q: "Apa yang dimaksud dengan 'fanatisme buta' dalam konteks sosial?", 
-      options: ["Cinta tanah air yang berlebihan hingga membenci yang berbeda", "Semangat belajar yang tinggi", "Kritik yang membangun", "Kerjasama antar kelompok"], 
-      answer: 0 },
-    { q: "Salah satu cara efektif menjaga Sila ke-3 di media sosial adalah...", 
-      options: ["Selalu debat dan memenangkan argumen", "Mempromosikan dialog dan saling menghargai", "Menghindari semua topik sensitif", "Hanya follow akun yang sependapat"], 
-      answer: 1 },
-    { q: "Mengapa Pancasila sangat relevan di era modern?", 
-      options: ["Karena sudah kuno", "Sebagai panduan moral menghadapi hoaks dan polarisasi", "Hanya untuk pelajaran sekolah", "Tidak ada hubungannya dengan teknologi"], 
-      answer: 1 }
-];
+    </main>
 
-let currentQuestion = 0;
-let score = 0;
+    <script src="script.js"></script>
 
-function loadQuestion() {
-    document.getElementById('result').classList.add('hidden');
-    document.getElementById('quiz').classList.remove('hidden');
-    
-    const q = questions[currentQuestion];
-    document.getElementById('question').textContent = q.q;
-    
-    let html = '';
-    q.options.forEach((opt, i) => {
-        html += `<button onclick="selectAnswer(${i})" class="w-full p-5 text-left border-2 border-gray-200 hover:border-[#c8102e] rounded-2xl transition text-lg">${opt}</button>`;
-    });
-    document.getElementById('options').innerHTML = html;
-    document.getElementById('next-btn').classList.add('hidden');
-}
+    <script>
+        const questions = [
+            { q: "Apa langkah pertama yang harus dilakukan saat melihat berita provokatif?", 
+              options: ["Langsung share ke grup", "Cek kebenarannya terlebih dahulu", "Marah-marah di kolom komentar", "Abaikan saja"], 
+              answer: 1 },
+            { q: "Sila ke-3 Pancasila berbunyi...", 
+              options: ["Ketuhanan Yang Maha Esa", "Persatuan Indonesia", "Keadilan Sosial bagi Seluruh Rakyat Indonesia", "Kemanusiaan yang Adil dan Beradab"], 
+              answer: 1 },
+            { q: "Salah satu ciri khas berita hoax adalah...", 
+              options: ["Sumber berita resmi", "Judul yang sangat sensasional", "Referensi jurnal ilmiah", "Foto dan video asli"], 
+              answer: 1 },
+            { q: "Sikap terbaik ketika melihat komentar kebencian di media sosial?", 
+              options: ["Balas dengan lebih kasar", "Report ke platform dan abaikan", "Like agar lebih viral", "Tag teman-teman untuk ikut"], 
+              answer: 1 },
+            { q: "Apa makna dari 'Bersatu kita teguh, bercerai kita runtuh'?", 
+              options: ["Persatuan sangat penting bagi bangsa", "Persaingan sehat itu baik", "Menang sendiri lebih utama", "Perbedaan harus dihilangkan"], 
+              answer: 0 },
+            { q: "Manakah yang termasuk dampak negatif hoaks terhadap persatuan?", 
+              options: ["Meningkatkan dialog antar kelompok", "Memicu polarisasi dan konflik sosial", "Memperkuat persatuan bangsa", "Menambah pengetahuan masyarakat"], 
+              answer: 1 },
+            { q: "Menurut nilai Pancasila, sikap yang paling dianjurkan di era digital adalah...", 
+              options: ["Bebas mengatakan apapun tanpa filter", "Menghargai perbedaan dan verifikasi fakta", "Selalu membela golongan sendiri", "Menyebarkan berita yang menguntungkan diri"], 
+              answer: 1 },
+            { q: "Apa yang dimaksud dengan 'fanatisme buta' dalam konteks sosial?", 
+              options: ["Cinta tanah air yang berlebihan hingga membenci yang berbeda", "Semangat belajar yang tinggi", "Kritik yang membangun", "Kerjasama antar kelompok"], 
+              answer: 0 },
+            { q: "Salah satu cara efektif menjaga Sila ke-3 di media sosial adalah...", 
+              options: ["Selalu debat dan memenangkan argumen", "Mempromosikan dialog dan saling menghargai", "Menghindari semua topik sensitif", "Hanya follow akun yang sependapat"], 
+              answer: 1 },
+            { q: "Mengapa Pancasila sangat relevan di era modern?", 
+              options: ["Karena sudah kuno", "Sebagai panduan moral menghadapi hoaks dan polarisasi", "Hanya untuk pelajaran sekolah", "Tidak ada hubungannya dengan teknologi"], 
+              answer: 1 }
+        ];
 
-function selectAnswer(selected) {
-    const correct = questions[currentQuestion].answer;
-    const buttons = document.querySelectorAll('#options button');
-    
-    buttons.forEach((btn, i) => {
-        btn.disabled = true;
-        if (i === correct) btn.classList.add('bg-green-100', 'border-green-600', 'text-green-700');
-        if (i === selected && i !== correct) btn.classList.add('bg-red-100', 'border-red-600', 'text-red-700');
-    });
+        let currentQuestion = 0;
+        let score = 0;
 
-    if (selected === correct) score++;
-    document.getElementById('next-btn').classList.remove('hidden');
-}
+        function loadQuestion() {
+            document.getElementById('result').classList.add('hidden');
+            document.getElementById('quiz').classList.remove('hidden');
+            
+            const q = questions[currentQuestion];
+            document.getElementById('question').textContent = q.q;
+            
+            let html = '';
+            q.options.forEach((opt, i) => {
+                html += `<button onclick="selectAnswer(${i})" class="w-full p-5 text-left border-2 border-gray-200 hover:border-[#c8102e] rounded-2xl transition text-lg font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none">${opt}</button>`;
+            });
+            document.getElementById('options').innerHTML = html;
+            document.getElementById('next-btn').classList.add('hidden');
+        }
 
-function nextQuestion() {
-    currentQuestion++;
-    if (currentQuestion < questions.length) {
+        function selectAnswer(selected) {
+            const correct = questions[currentQuestion].answer;
+            const buttons = document.querySelectorAll('#options button');
+            
+            buttons.forEach((btn, i) => {
+                btn.disabled = true;
+                if (i === correct) btn.classList.add('bg-green-100', 'border-green-600', 'text-green-700');
+                if (i === selected && i !== correct) btn.classList.add('bg-red-100', 'border-red-600', 'text-red-700');
+            });
+
+            if (selected === correct) score++;
+            document.getElementById('next-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quiz').classList.add('hidden');
+            document.getElementById('result').classList.remove('hidden');
+            document.getElementById('score').textContent = score;
+            
+            const feedback = document.getElementById('feedback');
+            if (score >= 8) feedback.innerHTML = "🎉 Luar biasa! Kamu sangat paham nilai persatuan Pancasila.";
+            else if (score >= 6) feedback.innerHTML = "✅ Bagus! Terus tingkatkan kesadaranmu menjaga persatuan.";
+            else if (score >= 4) feedback.innerHTML = "💪 Cukup baik. Ayo pelajari lebih dalam lagi.";
+            else feedback.innerHTML = "🌱 Masih perlu banyak belajar. Jangan menyerah!";
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            loadQuestion();
+        }
+
+        let votes = {1: 0, 2: 0, 3: 0};
+        function vote(option) {
+            votes[option]++;
+            const total = Object.values(votes).reduce((a,b) => a+b, 0);
+            let html = `<h3 class="font-bold text-xl mb-4 text-gray-800">Hasil Polling Saat Ini:</h3>`;
+            html += `<div class="max-w-md mx-auto space-y-2 text-left bg-gray-50 p-6 rounded-2xl border border-gray-100">`;
+            html += `<p class="flex justify-between"><span>🔵 Positif:</span> <span class="font-bold">${votes[1]} vote (${Math.round(votes[1]/total*100) || 0}%)</span></p>`;
+            html += `<p class="flex justify-between"><span>🔴 Negatif:</span> <span class="font-bold">${votes[2]} vote (${Math.round(votes[2]/total*100) || 0}%)</span></p>`;
+            html += `<p class="flex justify-between"><span>⚫ Netral:</span> <span class="font-bold">${votes[3]} vote (${Math.round(votes[3]/total*100) || 0}%)</span></p>`;
+            html += `</div>`;
+            document.getElementById('poll-result').innerHTML = html;
+        }
+
         loadQuestion();
-    } else {
-        showResult();
-    }
-}
-
-function showResult() {
-    document.getElementById('quiz').classList.add('hidden');
-    document.getElementById('result').classList.remove('hidden');
-    document.getElementById('score').textContent = score;
-    
-    const feedback = document.getElementById('feedback');
-    if (score >= 8) feedback.innerHTML = "🎉 Luar biasa! Kamu sangat paham nilai persatuan Pancasila.";
-    else if (score >= 6) feedback.innerHTML = "✅ Bagus! Terus tingkatkan kesadaranmu menjaga persatuan.";
-    else if (score >= 4) feedback.innerHTML = "💪 Cukup baik. Ayo pelajari lebih dalam lagi.";
-    else feedback.innerHTML = "🌱 Masih perlu banyak belajar. Jangan menyerah!";
-}
-
-function restartQuiz() {
-    currentQuestion = 0;
-    score = 0;
-    loadQuestion();
-}
-
-let votes = {1: 0, 2: 0, 3: 0};
-function vote(option) {
-    votes[option]++;
-    const total = Object.values(votes).reduce((a,b) => a+b, 0);
-    let html = `<h3 class="font-bold mb-4">Hasil Polling Saat Ini:</h3>`;
-    html += `<p>Positif: ${votes[1]} (${Math.round(votes[1]/total*100) || 0}%)</p>`;
-    html += `<p>Negatif: ${votes[2]} (${Math.round(votes[2]/total*100) || 0}%)</p>`;
-    html += `<p>Netral: ${votes[3]} (${Math.round(votes[3]/total*100) || 0}%)</p>`;
-    document.getElementById('poll-result').innerHTML = html;
-}
-
-loadQuestion();
-</script>
+    </script>
 </body>
 </html>
