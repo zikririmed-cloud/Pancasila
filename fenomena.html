@@ -5,117 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fenomena Sosial - Pancasila</title>
     <link rel="icon" type="image/png" href="Garuda_Pancasila.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="tail-container bg-gray-50 text-gray-800">
 
-<nav class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <img src="Garuda_Pancasila.png" alt="Logo" class="w-12 h-12 object-contain">
-            <span class="text-3xl font-bold text-[#c8102e]">Pancasila</span>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-3">
+                <img src="Garuda_Pancasila.png" alt="Logo" class="w-12 h-12 object-contain">
+                <span class="text-3xl font-bold text-[#c8102e]">Pancasila</span>
+            </div>
+            
+            <div class="hidden md:flex gap-8 text-lg font-medium items-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="fenomena.html" class="nav-link active">Fenomena Sosial</a>
+                <a href="nilai.html" class="nav-link">Nilai Moral</a>
+                <a href="interaktif.html" class="nav-link">Interaktif</a>
+                
+                <button onclick="showLoginModal()" id="login-btn" 
+                        class="flex items-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium hover:bg-[#9c0c24] transition-colors">
+                    <i class="fas fa-user"></i> Login
+                </button>
+            </div>
+            
+            <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700 focus:outline-none">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </button>
         </div>
-        
-        <div class="hidden md:flex gap-8 text-lg font-medium items-center">
-            <a href="index.html" class="hover:text-[#c8102e]">Home</a>
-            <a href="fenomena.html" class="hover:text-[#c8102e]">Fenomena Sosial</a>
-            <a href="nilai.html" class="hover:text-[#c8102e]">Nilai Moral</a>
-            <a href="interaktif.html" class="hover:text-[#c8102e]">Interaktif</a>
-            <button onclick="showLoginModal()" id="login-btn" 
-                    class="flex items-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium hover:bg-[#9c0c24]">
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-inner">
+            <a href="index.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Home</a>
+            <a href="fenomena.html" class="block py-2 text-lg font-medium text-[#c8102e] border-l-4 border-[#c8102e] pl-3">Fenomena Sosial</a>
+            <a href="nilai.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Nilai Moral</a>
+            <a href="interaktif.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Interaktif</a>
+            
+            <button onclick="showLoginModal()" class="w-full flex items-center justify-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium mt-2">
                 <i class="fas fa-user"></i> Login
             </button>
         </div>
-        
-        <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700">
-            <i id="menu-icon" class="fas fa-bars"></i>
-        </button>
-    </div>
-</nav>
+    </nav>
 
-<header class="bg-[#c8102e] text-white py-16 md:py-20">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            Fenomena Sosial
-        </h1>
-        <p class="text-xl md:text-2xl text-white/90">
-            Perpecahan Sosial Akibat Hoaks dan Fanatisme di Era Digital
-        </p>
-    </div>
-</header>
-
-<div class="max-w-6xl mx-auto px-6 py-12">
-
-    <!-- Kasus Nyata -->
-    <div class="bg-white p-10 rounded-3xl shadow-sm mb-12">
-        <h2 class="text-3xl font-bold mb-8 text-[#c8102e] text-center">Penjelasan Kasus Nyata</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="space-y-6">
-                <div class="border-l-4 border-[#c8102e] pl-6">
-                    <h3 class="font-bold text-xl mb-2">1. Hoax Politik Saat Pemilu</h3>
-                    <p class="text-gray-600">Penyebaran berita palsu yang memfitnah calon pemimpin, menyebabkan masyarakat terpecah menjadi kubu-kubu yang saling membenci.</p>
-                </div>
-                <div class="border-l-4 border-[#c8102e] pl-6">
-                    <h3 class="font-bold text-xl mb-2">2. Ujaran Kebencian Berbasis SARA</h3>
-                    <p class="text-gray-600">Komentar dan postingan yang menghina suku, agama, ras, dan antargolongan yang sering menjadi viral.</p>
-                </div>
-            </div>
-            <div class="space-y-6">
-                <div class="border-l-4 border-[#c8102e] pl-6">
-                    <h3 class="font-bold text-xl mb-2">3. Cancel Culture</h3>
-                    <p class="text-gray-600">Fenomena "pembatalan" seseorang hanya karena perbedaan pendapat.</p>
-                </div>
-                <div class="border-l-4 border-[#c8102e] pl-6">
-                    <h3 class="font-bold text-xl mb-2">4. Hoax Kesehatan & Bencana</h3>
-                    <p class="text-gray-600">Berita palsu yang menyebabkan kepanikan massal dan saling tuduh antar masyarakat.</p>
-                </div>
-            </div>
+    <header class="hero-bg text-white py-16 md:py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Fenomena Sosial</h1>
+            <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">Perpecahan Sosial Akibat Hoaks dan Fanatisme di Era Digital</p>
         </div>
-    </div>
+    </header>
 
-    <div class="bg-white p-10 rounded-3xl shadow-sm mb-12">
-        <h2 class="text-3xl font-bold mb-8 text-[#c8102e] text-center">Dampak Sosial yang Ditimbulkan</h2>
-        <div class="grid md:grid-cols-2 gap-8 text-lg">
-            <ul class="space-y-5">
-                <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Melemahnya rasa persatuan dan kesatuan bangsa</li>
-                <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Meningkatnya polarisasi dan konflik horizontal</li>
-                <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Erosi kepercayaan antar warga negara</li>
-                <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Munculnya diskriminasi dan prasangka buruk</li>
-            </ul>
-            <ul class="space-y-5">
-                <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Ancaman terhadap stabilitas keamanan nasional</li>
-                <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Dampak psikologis (stress & kemarahan)</li>
-                <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Menurunnya kualitas demokrasi</li>
-                <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Kerusakan reputasi bangsa</li>
-            </ul>
-        </div>
-    </div>
+    <main class="max-w-6xl mx-auto px-6 py-12">
 
-    <div class="bg-white p-10 rounded-3xl shadow-sm">
-        <h2 class="text-3xl font-bold mb-8 text-[#c8102e] text-center">Cara Melawan Fenomena Ini</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="text-center p-6 bg-gray-50 rounded-2xl">
-                <div class="text-4xl mb-4">🔍</div>
-                <h4 class="font-bold mb-2">Verifikasi Fakta</h4>
-                <p class="text-sm text-gray-600">Selalu cek kebenaran sebelum menyebarkan informasi</p>
+        <section class="bg-white p-10 rounded-3xl shadow-sm mb-12 border border-gray-100">
+            <h2 class="text-3xl font-bold mb-8 text-[#c8102e] text-center">Penjelasan Kasus Nyata</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="border-l-4 border-[#c8102e] pl-6 card-hover py-1">
+                        <h3 class="font-bold text-xl mb-2">1. Hoax Politik Saat Pemilu</h3>
+                        <p class="text-gray-600">Penyebaran berita palsu yang memfitnah calon pemimpin, menyebabkan masyarakat terpecah menjadi kubu-kubu yang saling membenci.</p>
+                    </div>
+                    <div class="border-l-4 border-[#c8102e] pl-6 card-hover py-1">
+                        <h3 class="font-bold text-xl mb-2">2. Ujaran Kebencian Berbasis SARA</h3>
+                        <p class="text-gray-600">Komentar dan postingan yang menghina suku, agama, ras, dan antargolongan yang sering menjadi viral.</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-[#c8102e] pl-6 card-hover py-1">
+                        <h3 class="font-bold text-xl mb-2">3. Cancel Culture</h3>
+                        <p class="text-gray-600">Fenomena "pembatalan" seseorang atau sekelompok pihak secara massal di media sosial hanya karena adanya perbedaan pendapat.</p>
+                    </div>
+                    <div class="border-l-4 border-[#c8102e] pl-6 card-hover py-1">
+                        <h3 class="font-bold text-xl mb-2">4. Hoax Kesehatan & Bencana</h3>
+                        <p class="text-gray-600">Berita palsu seputar krisis kesehatan atau musibah yang menyebabkan kepanikan massal serta aksi saling tuduh antar warga.</p>
+                    </div>
+                </div>
             </div>
-            <div class="text-center p-6 bg-gray-50 rounded-2xl">
-                <div class="text-4xl mb-4">🗣️</div>
-                <h4 class="font-bold mb-2">Dialog Santun</h4>
-                <p class="text-sm text-gray-600">Gunakan bahasa yang baik meski berbeda pendapat</p>
-            </div>
-            <div class="text-center p-6 bg-gray-50 rounded-2xl">
-                <div class="text-4xl mb-4">🤝</div>
-                <h4 class="font-bold mb-2">Memperkuat Persatuan</h4>
-                <p class="text-sm text-gray-600">Fokus pada persamaan, bukan perbedaan</p>
-            </div>
-        </div>
-    </div>
+        </section>
 
-</div>
+        <section class="bg-white p-10 rounded-3xl shadow-sm mb-12 border border-gray-100">
+            <h2 class="text-3xl font-bold mb-8 text-[#c8102e] text-center">Dampak Sosial yang Ditimbulkan</h2>
+            <div class="grid md:grid-cols-2 gap-x-8 gap-y-2 text-lg">
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Melemahnya rasa persatuan dan kesatuan bangsa</li>
+                    <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Meningkatnya polarisasi dan konflik horizontal</li>
+                    <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Erosi kepercayaan antar sesama warga negara</li>
+                    <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Munculnya diskriminasi dan prasangka buruk terhadap kelompok lain</li>
+                </ul>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Ancaman nyata terhadap stabilitas keamanan nasional</li>
+                    <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Dampak psikologis massal berupa stress tingkat tinggi dan kemarahan</li>
+                    <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Menurunnya kualitas iklim demokrasi di ruang digital</li>
+                    <li class="flex items-start gap-3"><span class="text-red-600 font-bold">•</span> Kerusakan reputasi etika dan tata krama komunikasi bangsa</li>
+                </ul>
+            </div>
+        </section>
 
-<script src="script.js"></script>
+        <section class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
+            <h2 class="text-3xl font-bold mb-8 text-[#c8102e] text-center">Cara Melawan Fenomena Ini</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center p-6 bg-gray-50 rounded-2xl border border-gray-100 card-hover">
+                    <div class="text-4xl mb-4">🔍</div>
+                    <h4 class="font-bold text-lg mb-2">Verifikasi Fakta</h4>
+                    <p class="text-sm text-gray-600">Selalu cek kebenaran sumber informasi secara kritis sebelum membagikannya kembali.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-2xl border border-gray-100 card-hover">
+                    <div class="text-4xl mb-4">🗣️</div>
+                    <h4 class="font-bold text-lg mb-2">Dialog Santun</h4>
+                    <p class="text-sm text-gray-600">Gunakan bahasa yang etis dan kepala dingin meskipun sedang menghadapi perbedaan opini.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-2xl border border-gray-100 card-hover">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h4 class="font-bold text-lg mb-2">Memperkuat Persatuan</h4>
+                    <p class="text-sm text-gray-600">Utamakan mencari titik temu dan persamaan sebagai sesama saudara sebangsa.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
