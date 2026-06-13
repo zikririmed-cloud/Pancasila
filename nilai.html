@@ -4,94 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nilai Moral dan Etika Pancasila</title>
-    <link rel="icon" type="image/png" href="Garuda_Pancasila.png">
+    <link class="w-12 h-12 object-contain" rel="icon" type="image/png" href="Garuda_Pancasila.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="tail-container bg-gray-50 text-gray-800">
 
-<nav class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <img src="Garuda_Pancasila.png" alt="Logo" class="w-12 h-12 object-contain">
-            <span class="text-3xl font-bold text-[#c8102e]">Pancasila</span>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+            <div class="flex items-center gap-3">
+                <img src="Garuda_Pancasila.png" alt="Logo" class="w-12 h-12 object-contain">
+                <span class="text-3xl font-bold text-[#c8102e]">Pancasila</span>
+            </div>
+
+            <div class="hidden md:flex gap-8 text-lg font-medium items-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="fenomena.html" class="nav-link">Fenomena Sosial</a>
+                <!-- Kelas 'active' dipindahkan ke Nilai Moral karena sedang membuka halaman ini -->
+                <a href="nilai.html" class="nav-link active">Nilai Moral</a>
+                <a href="interaktif.html" class="nav-link">Interaktif</a>
+                
+                <button onclick="showLoginModal()" id="login-btn" 
+                        class="flex items-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium hover:bg-[#9c0c24] transition-colors">
+                    <i class="fas fa-user"></i> Login
+                </button>
+            </div>
+
+            <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700 focus:outline-none">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </button>
         </div>
-        
-        <div class="hidden md:flex gap-8 text-lg font-medium items-center">
-            <a href="index.html" class="hover:text-[#c8102e]">Home</a>
-            <a href="fenomena.html" class="hover:text-[#c8102e]">Fenomena Sosial</a>
-            <a href="nilai.html" class="hover:text-[#c8102e]">Nilai Moral</a>
-            <a href="interaktif.html" class="hover:text-[#c8102e]">Interaktif</a>
-            <button onclick="showLoginModal()" id="login-btn" 
-                    class="flex items-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium hover:bg-[#9c0c24]">
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-inner">
+            <a href="index.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Home</a>
+            <a href="fenomena.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Fenomena Sosial</a>
+            <a href="nilai.html" class="block py-2 text-lg font-medium text-[#c8102e] border-l-4 border-[#c8102e] pl-3">Nilai Moral</a>
+            <a href="interaktif.html" class="block py-2 text-lg font-medium text-gray-600 hover:text-[#c8102e] pl-3">Interaktif</a>
+            
+            <button onclick="showLoginModal()" class="w-full flex items-center justify-center gap-2 bg-[#c8102e] text-white px-5 py-2 rounded-2xl font-medium mt-2">
                 <i class="fas fa-user"></i> Login
             </button>
         </div>
+    </nav>
+
+    <header class="hero-bg text-white py-16 md:py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Nilai Moral dan Etika Pancasila</h1>
+            <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">Sila ke-3 sebagai Panduan Hidup Berbangsa di Era Digital</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+
+        <section class="bg-white p-10 rounded-3xl shadow-sm mb-12 border border-gray-100 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-[#c8102e]">Sila ke-3: Persatuan Indonesia</h2>
+            <p class="text-2xl italic leading-relaxed text-gray-700">"Bersatu kita teguh, bercerai kita runtuh"</p>
+            <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
+                Sila ketiga mengajarkan pentingnya persatuan dan kesatuan bangsa di atas segala perbedaan yang ada di tengah masyarakat.
+            </p>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-10">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h3 class="text-2xl font-bold mb-6 text-[#c8102e] border-b pb-2 border-gray-100">Hubungan dengan Pancasila</h3>
+                <div class="space-y-5 text-lg leading-relaxed text-gray-700">
+                    <p>Pancasila bukan hanya sekadar dasar negara, melainkan sebuah <strong>panduan moral</strong> utama dalam kehidupan berbangsa dan bernegara di era modern ini.</p>
+                    <p>Sila ke-3 menjadi fondasi esensial untuk menjaga kerukunan di tengah maraknya arus hoaks, polarisasi opini, serta fanatisme ekstrem di media sosial.</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h3 class="text-2xl font-bold mb-6 text-[#c8102e] border-b pb-2 border-gray-100">Sikap Moral yang Diharapkan</h3>
+                <ul class="space-y-4 text-lg text-gray-700">
+                    <li class="flex items-start gap-3"><span class="text-green-600 font-bold">✓</span> Selalu verifikasi kebenaran informasi sebelum menyebarkannya</li>
+                    <li class="flex items-start gap-3"><span class="text-green-600 font-bold">✓</span> Menghargai perbedaan pendapat serta latar belakang keyakinan</li>
+                    <li class="flex items-start gap-3"><span class="text-green-600 font-bold">✓</span> Menggunakan tutur bahasa yang santun dan bijak di media sosial</li>
+                    <li class="flex items-start gap-3"><span class="text-green-600 font-bold">✓</span> Mendorong ruang dialog sehat dan budaya musyawarah mufakat</li>
+                    <li class="flex items-start gap-3"><span class="text-green-600 font-bold">✓</span> Berkomitmen menjadi agen persatuan yang damai di lingkungan sekitar</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mt-12 bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
+            <h3 class="text-2xl font-bold mb-8 text-center text-[#c8102e]">Nilai-Nilai Moral Pancasila yang Relevan</h3>
+            <div class="grid md:grid-cols-2 gap-8 text-lg">
+                <div class="space-y-6">
+                    <div class="p-4 bg-gray-50 rounded-2xl border border-gray-100 card-hover">
+                        <strong class="text-gray-800 block mb-1">1. Persatuan dan Kesatuan</strong>
+                        <span class="text-gray-600 text-base">Mengutamakan keutuhan dan kepentingan bangsa di atas ego pribadi maupun golongan.</span>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-2xl border border-gray-100 card-hover">
+                        <strong class="text-gray-800 block mb-1">2. Toleransi</strong>
+                        <span class="text-gray-600 text-base">Menerima dan menghormati setiap keragaman sebagai kekayaan luhur milik bersama.</span>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="p-4 bg-gray-50 rounded-2xl border border-gray-100 card-hover">
+                        <strong class="text-gray-800 block mb-1">3. Tanggung Jawab Digital</strong>
+                        <span class="text-gray-600 text-base">Sadar dan bertanggung jawab penuh atas setiap kata, komentar, maupun postingan yang diunggah.</span>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-2xl border border-gray-100 card-hover">
+                        <strong class="text-gray-800 block mb-1">4. Musyawarah</strong>
+                        <span class="text-gray-600 text-base">Menyelesaikan silang pendapat dengan kepala dingin melalui jalur diskusi yang membangun.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700">
-            <i id="menu-icon" class="fas fa-bars"></i>
-        </button>
-    </div>
-</nav>
+    </main>
 
-<header class="bg-[#c8102e] text-white py-16 md:py-20">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            Nilai Moral dan Etika Pancasila
-        </h1>
-        <p class="text-xl md:text-2xl text-white/90">
-            Sila ke-3 sebagai Panduan Hidup Berbangsa di Era Digital
-        </p>
-    </div>
-</header>
-
-<div class="max-w-6xl mx-auto px-6 py-12">
-    
-    <div class="bg-white p-10 rounded-3xl shadow-sm mb-12">
-        <h2 class="text-3xl font-bold mb-6 text-center text-[#c8102e]">Sila ke-3: Persatuan Indonesia</h2>
-        <p class="text-2xl text-center italic leading-relaxed">"Bersatu kita teguh, bercerai kita runtuh"</p>
-        <p class="text-center mt-6 text-gray-600 max-w-2xl mx-auto">
-            Sila ketiga mengajarkan pentingnya persatuan dan kesatuan bangsa di atas segala perbedaan.
-        </p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-10">
-        <div class="bg-white p-8 rounded-3xl shadow-sm">
-            <h3 class="text-2xl font-bold mb-6 text-[#c8102e]">Hubungan dengan Pancasila</h3>
-            <div class="space-y-5 text-lg">
-                <p>Pancasila bukan hanya dasar negara, melainkan <strong>panduan moral</strong> kehidupan berbangsa dan bernegara di era modern.</p>
-                <p>Sila ke-3 menjadi fondasi utama untuk menjaga persatuan di tengah maraknya hoaks, polarisasi, dan fanatisme di media sosial.</p>
-            </div>
-        </div>
-
-        <div class="bg-white p-8 rounded-3xl shadow-sm">
-            <h3 class="text-2xl font-bold mb-6 text-[#c8102e]">Sikap Moral yang Diharapkan</h3>
-            <ul class="space-y-5 text-lg">
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold">✓</span> Verifikasi informasi sebelum menyebarkan</li>
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold">✓</span> Menghargai perbedaan pendapat dan keyakinan</li>
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold">✓</span> Menggunakan bahasa santun di media sosial</li>
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold">✓</span> Mendorong dialog dan musyawarah</li>
-                <li class="flex items-start gap-3"><span class="text-green-600 font-bold">✓</span> Menjadi agen persatuan di lingkungan sekitar</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="mt-16 bg-white p-10 rounded-3xl shadow-sm">
-        <h3 class="text-2xl font-bold mb-8 text-center text-[#c8102e]">Nilai-Nilai Moral Pancasila yang Relevan</h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="space-y-6">
-                <div><strong>1. Persatuan dan Kesatuan</strong><br><span class="text-gray-600">Mengutamakan kepentingan bangsa di atas golongan</span></div>
-                <div><strong>2. Toleransi</strong><br><span class="text-gray-600">Menerima keragaman sebagai kekayaan bangsa</span></div>
-            </div>
-            <div class="space-y-6">
-                <div><strong>3. Tanggung Jawab Digital</strong><br><span class="text-gray-600">Bertanggung jawab atas setiap kata dan postingan</span></div>
-                <div><strong>4. Musyawarah</strong><br><span class="text-gray-600">Menyelesaikan perbedaan melalui dialog yang baik</span></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
